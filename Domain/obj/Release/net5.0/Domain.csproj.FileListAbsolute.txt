@@ -1,0 +1,12 @@
+D:\NavyArchNewVersion\Domain\bin\Release\net5.0\Domain.deps.json
+D:\NavyArchNewVersion\Domain\bin\Release\net5.0\Domain.dll
+D:\NavyArchNewVersion\Domain\bin\Release\net5.0\ref\Domain.dll
+D:\NavyArchNewVersion\Domain\bin\Release\net5.0\Domain.pdb
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.csproj.AssemblyReference.cache
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.AssemblyInfoInputs.cache
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.AssemblyInfo.cs
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.dll
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\ref\Domain.dll
+D:\NavyArchNewVersion\Domain\obj\Release\net5.0\Domain.pdb

@@ -1,0 +1,60 @@
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Application.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Domain.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Application.pdb
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Domain.pdb
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Application.dll
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Domain.dll
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Application.pdb
+D:\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Domain.pdb
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+D:\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Application.dll
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Domain.dll
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Application.pdb
+D:\main projects\NavyArchNewVersion\Infrastructure\bin\Debug\net5.0\Domain.pdb
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+D:\main projects\NavyArchNewVersion\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache

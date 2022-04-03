@@ -1,0 +1,36 @@
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.deps.json
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\ref\Domain.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.pdb
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\ref\Domain.dll
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.pdb
+D:\Course\Courses in logical oreder\Main Projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+D:\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.deps.json
+D:\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.dll
+D:\NavyArchNewVersion\Domain\bin\Debug\net5.0\ref\Domain.dll
+D:\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.pdb
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.dll
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\ref\Domain.dll
+D:\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.pdb
+D:\main projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.deps.json
+D:\main projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.dll
+D:\main projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\ref\Domain.dll
+D:\main projects\NavyArchNewVersion\Domain\bin\Debug\net5.0\Domain.pdb
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.dll
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\ref\Domain.dll
+D:\main projects\NavyArchNewVersion\Domain\obj\Debug\net5.0\Domain.pdb

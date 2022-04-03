@@ -1,0 +1,15 @@
+D:\NavyArchNewVersion\Application\bin\Release\net5.0\Application.deps.json
+D:\NavyArchNewVersion\Application\bin\Release\net5.0\Application.dll
+D:\NavyArchNewVersion\Application\bin\Release\net5.0\ref\Application.dll
+D:\NavyArchNewVersion\Application\bin\Release\net5.0\Application.pdb
+D:\NavyArchNewVersion\Application\bin\Release\net5.0\Domain.dll
+D:\NavyArchNewVersion\Application\bin\Release\net5.0\Domain.pdb
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.csproj.AssemblyReference.cache
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.AssemblyInfoInputs.cache
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.AssemblyInfo.cs
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.csproj.CoreCompileInputs.cache
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.csproj.CopyComplete
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.dll
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\ref\Application.dll
+D:\NavyArchNewVersion\Application\obj\Release\net5.0\Application.pdb
