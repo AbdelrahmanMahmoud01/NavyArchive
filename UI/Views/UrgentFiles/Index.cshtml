@@ -1,0 +1,199 @@
+﻿@using Application.Features.Pagintaion
+@using Infrastructure
+@using Microsoft.AspNetCore.Identity
+@model IEnumerable<Domain.Entites.FileInfo>
+@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signInManger 
+
+@{
+    ViewData["Title"] = "Index";
+
+    Pager pager = new Pager();
+
+    int pageNo = 0;
+    if(ViewBag.Pager is not null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+<h1 class="text-primary">الملفات العاجلة</h1>
+<div id="PlaceHolderHere"></div>
+<p class="mt-3">
+    <a asp-action="Create"  class="btn btn-outline-primary" asp-controller="file">إنشاء ملف</a>
+</p>
+  @*<form class="form-inline float-right" style="margin-bottom:10px;" asp-action="Search">
+    <input class="form-control mr-sm-1" name="term" type="search" autocomplete="off" placeholder="Search" aria-label="Search"
+    value="@ViewBag.Term">
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">بحث</button>
+  </form>*@
+  <form class="form-inline mb-5" style="margin-bottom:10px;" asp-action="Search">
+    <input class="form-control mr-sm-2" style="width:93%; opacity:.85; direction:rtl;" name="term" type="search" autocomplete="off" placeholder="إبحث عن  المرسل / القيد / الشأن / الضابط / القسم / الإجراء" aria-label="Search"
+    value="@ViewBag.Term">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit" style="width:6%;">بحث</button>
+  </form>
+<table class="table">
+    <thead class="bg-primary">
+        <tr style="color:white;">
+            <th>
+                المرسل
+            </th>
+            <th>
+                ضابط
+            </th>
+            <th>
+                قسم
+            </th>
+            <th>
+                بشأن
+            </th>
+            <th>
+                الإجراء
+            </th>
+            <th>
+                تاريخ التذكير
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody class="bg-white" style="opacity:.95">
+
+
+
+@foreach (var item in Model) {
+ if(DateTime.Compare(DateTime.Now,item.ReminderDate) >0 || 
+ (DateTime.Now.Day == item.ReminderDate.Day && DateTime.Now.Month == item.ReminderDate.Month))
+    {
+                 <tr class="text-danger">
+                <td>
+                    @{
+                        var src = "";
+                        src = string.Join(" - ", item.FileInfoSoruce.Select(m => m.FileSource.Name));
+                        <span>@src</span>
+                     }
+                 </td>
+                 <td>
+                    @{
+                        var officer = "";
+                        officer = string.Join(" - ", item.FileInfoOfficers.Select(m => m.Officer.Name));
+                        <span>@officer</span>
+                     }
+                 </td>
+                 <td>
+                    @{
+                        var department = "";
+                        department = string.Join(" - ", item.FileInfoOfficers.Select(m => m.Officer.Destination.Name));
+                        <span>@department</span>
+                     }
+                 </td>
+            <td>
+              @if(item.AboutUrl != null)
+              {
+                <a href="~/images/@item.AboutUrl" target="_blank">@item.AboutTag</a>
+              }
+              else
+              {
+                  @Html.DisplayFor(modelItem => item.AboutTag)
+              }
+                </td>
+            <td>
+                @if (item.ProcedcureUrl != null)
+                {
+                    var query = item.ProcedcureTage is null ? "تم اتخاذ الاجراء" : @item.ProcedcureTage;
+                    <a href="~/images/@item.AboutUrl" target="_blank">@query</a>
+                }
+                else if(item.ProcedcureTage != null)
+                {
+                    @Html.DisplayFor(modelItem => item.ProcedcureTage)
+                }
+                else
+                {
+                    <span>لا يوجد</span>
+                }
+            </td>
+            <td>
+                @item.ReminderDate.Day / @item.ReminderDate.Month / @item.ReminderDate.Year
+            </td>
+            <td>
+                <a asp-action="Details" asp-controller ="file" asp-route-id="@item.Id" class="btn btn-outline-primary">تفاصيل</a>
+                    <a asp-action="Edit" asp-controller ="file" asp-route-id="@item.Id" class="btn btn-outline-primary">تعديل</a> 
+                    <a asp-action="Delete" asp-controller ="file" asp-route-id="@item.Id" class="btn btn-outline-danger">حذف</a>
+                    <button type="button" class="btn btn-outline-light " data-toggle="ajax-modal"
+                    data-target="#addEmployee" data-url="@Url.Action($"EditModal/{item.Id}")">
+                    <img src="~/img/share.png" alt="Logo" style="width:1rem;">
+                    </button>
+            </td>
+        </tr>
+    }
+    else
+            {
+                <tr>
+                <td>
+                    @{
+                        var src = "";
+                        src = string.Join(" - ", item.FileInfoSoruce.Select(m => m.FileSource.Name));
+                        <span>@src</span>
+                     }
+                 </td>
+                 <td>
+                    @{
+                        var officer = "";
+                        officer = string.Join(" - ", item.FileInfoOfficers.Select(m => m.Officer.Name));
+                        <span>@officer</span>
+                     }
+                 </td>
+                 <td>
+                    @{
+                        var department = "";
+                        department = string.Join(" - ", item.FileInfoOfficers.Select(m => m.Officer.Destination.Name));
+                        <span>@department</span>
+                     }
+                 </td>
+            <td>
+              @if(item.AboutUrl != null)
+              {
+                <a href="~/images/@item.AboutUrl" target="_blank">@item.AboutTag</a>
+              }
+              else
+              {
+                  @Html.DisplayFor(modelItem => item.AboutTag)
+              }
+                </td>
+            <td>
+                @if (item.ProcedcureUrl != null)
+                {
+                    var query = item.ProcedcureTage is null ? "تم اتخاذ الاجراء" : @item.ProcedcureTage;
+                    <a href="~/images/@item.AboutUrl" target="_blank">@query</a>
+                }
+                else if(item.ProcedcureTage != null)
+                {
+                    @Html.DisplayFor(modelItem => item.ProcedcureTage)
+                }
+                else
+                {
+                    <span>لا يوجد</span>
+                }
+            </td>
+            <td>
+                @item.ReminderDate.Day / @item.ReminderDate.Month / @item.ReminderDate.Year
+            </td>
+            <td>
+                <a asp-action="Details" asp-controller ="file" asp-route-id="@item.Id" class="btn btn-outline-primary">تفاصيل</a>
+                <a asp-action="Edit" asp-controller ="file" asp-route-id="@item.Id" class="btn btn-outline-primary">تعديل</a> 
+                <a asp-action="Delete" asp-controller ="file" asp-route-id="@item.Id" class="btn btn-outline-danger">حذف</a>
+                <button type="button" class="btn btn-outline-light " data-toggle="ajax-modal"
+                data-target="#addEmployee" data-url="@Url.Action($"EditModal/{item.Id}")">
+                <img src="~/img/share.png" alt="Logo" style="width:1rem;">
+                </button>
+
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>
+<partial name="_Pager" model="@pager"></partial>
+
+

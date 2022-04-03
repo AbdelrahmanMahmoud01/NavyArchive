@@ -1,0 +1,168 @@
+﻿@using UI.ViewModels
+@model FileEditViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>تعديل</h1>
+
+<h4>الملفات</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input hidden asp-for="Id" />
+            <input hidden asp-for="ExistingFilePath" />
+            <input hidden asp-for="ExistingProcPath" />
+
+            <div class="form-group">
+                <label asp-for="SourceId" class="control-label">المصدر</label><br />
+                <div class="col-sm-6"><br />
+                    @Html.ListBoxFor(model => model.SourceId,new MultiSelectList(Model.drpSoruces, "Value", "Text")
+                    , new { @class = "form-control", multiple = "multiple", id = "source_dropdown" })
+                </div>
+                <span asp-validation-for="SourceId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SourceId" class="control-label">الأقسام</label><br />
+                <div class="col-sm-6">
+                    @Html.ListBoxFor(model => model.DepartmentId,new MultiSelectList(Model.drpDepartments, "Value", "Text")
+                    , new { @class = "form-control", multiple = "multiple", id = "department_dropdown" })
+                </div>
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" id="officerItems">
+                <label asp-for="SourceId" class="control-label">الضباط</label><br />
+                <div class="col-sm-6">
+                    @Html.ListBoxFor(model => model.OfficerId,new MultiSelectList(Model.drpOfficers, "Value", "Text")
+                    , new { @class = "form-control", multiple = "multiple", id = "officer_dropdown" })
+                </div>
+                <span asp-validation-for="OfficerId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Const" class="control-label">القيد</label>
+                <input asp-for="Const" class="form-control" />
+                <span asp-validation-for="Const" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AboutUrl" class="control-label">ملف الشأن</label>
+                <div class="input-group mb-3">
+                  <div class="custom-file" style="overflow:hidden;">
+                    <input autocomplete="off"  asp-for="AboutUrl" type="file"
+                    class="custom-file-input" id="inputGroupFile02" accept=".png, .jpg, .pdf">
+                    <label asp-for="AboutUrl" class="custom-file-label" for="inputGroupFile02">@ViewBag.AboutUrl</label>
+                  </div>
+                </div>
+                <span asp-validation-for="AboutUrl" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="AboutTag" class="control-label">بشأن</label>
+                <input asp-for="AboutTag" class="form-control" />
+                <span asp-validation-for="AboutTag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcedcureUrl" class="control-label">ملف الإجراء</label>
+                <div class="input-group mb-3">
+                  <div class="custom-file" style="overflow:hidden;">
+                    <input autocomplete="off"  asp-for="ProcedcureUrl" type="file"
+                    class="custom-file-input" id="inputGroupFile02" accept=".png, .jpg, .pdf">
+                    <label asp-for="ProcedcureUrl" class="custom-file-label" for="inputGroupFile02">@ViewBag.ProcedcureUrl</label>
+                  </div>
+                </div>
+                <span asp-validation-for="AboutUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcedcureTage" class="control-label">الإجراء</label>
+                <input asp-for="ProcedcureTage" class="form-control" />
+                <span asp-validation-for="ProcedcureTage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReminderDate" class="control-label">تاريخ التذكير</label>
+                <input asp-for="ReminderDate" class="form-control" />
+                <span asp-validation-for="ReminderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note" class="control-label">ملاحظات</label>
+                <input asp-for="Note" class="form-control" />
+                <span asp-validation-for="Note" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-info" />
+                <a asp-action="Index" class="btn btn-outline-info">رجوع</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script>
+
+     $(document).ready(function() {
+
+
+             $("#department_dropdown").change(function() {
+
+        var v = $(this).val();
+        var myList = document.getElementById('officerItems')
+            .getElementsByClassName('multiselect-container dropdown-menu')[0];
+            myList.setAttribute('id','OfficerUlId');
+
+        $.post("@Url.Action("LoadOfficers", "file")",{ cid: v },function (result) {
+            console.log(result);
+                $("#officer_dropdown").html("");
+                $.each(result,function(a, b) {                        
+                       $("#officer_dropdown") 
+                       .append(`<option value="${b.value}">${b.text}</option>`);
+                });
+                
+                $("#OfficerUlId").html("");
+                    $.each(result,function(a, b) {                        
+                           $("#OfficerUlId") 
+                           .append(`
+                           <li class="active">
+                           <a >
+                           <label class="checkbox" title="${b.text}">
+                           <input type="checkbox" value="${b.value}"/>${b.text}
+                           </label>
+                           </a>
+                           </li>`)
+                    });    
+ 
+        });
+    });
+     
+
+    });
+
+     $(document).ready(function () {
+         $('.custom-file-input').on("change", function () {
+             var fileName = $(this).val().split("\\").pop();
+             $(this).next('.custom-file-label').html(fileName);
+         });
+     });
+
+
+
+        $(document).ready(function () {
+            $('#source_dropdown').multiselect();
+        });
+
+        $(document).ready(function () {
+            $('#officer_dropdown').multiselect();
+        });
+
+        $(document).ready(function () {
+            $('#department_dropdown').multiselect();
+        });
+ </script>
+}

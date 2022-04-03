@@ -1,0 +1,41 @@
+﻿@model IEnumerable<GetOfficersListViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>الضباط</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">إضافة</a>
+</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+               الأسم
+            </th>
+            <th>
+                القسم
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-light">تعديل</a> 
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-light">تفاصيل</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">حذف</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+﻿@model Domain.Entites.FileSource
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1> هل تريد حذف بيانات </h1>
+<div>
+    <h3>الجهة المرسلة</h3>
+    <hr />
+    @if(ViewBag.IsFailed){
+        <div style="display:inline-block" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong> لا يمكن حذف هذه البيانات</strong> لأعتماد جداول أخري عليها
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden = "true">&times;</span>
+              </button>
+            </div>
+        }
+    <dl class="row">
+        <dt class = "col-sm-2">
+            الأسم
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="حذف" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-outline-info">العودة للقائمة </a>
+    </form>
+</div>

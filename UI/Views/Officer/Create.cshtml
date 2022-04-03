@@ -1,0 +1,47 @@
+﻿@model CreateOfficerPostCommand
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>إضافة</h1>
+
+<h4>ضابط</h4>
+<hr />
+@if (ViewBag.IsSuccess)
+{
+    <div style="display:inline-block" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong> تم حفظ</strong> بيانات الضابط
+        <a asp-action="Details" asp-route-id="@ViewBag.officerId">عرض البيانات</a>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden = "true">&times;</span>
+              </button>
+            </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">الأسم</label>
+                <input autofocus asp-for="Name" class="form-control" autocomplete="off" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartmentId" class="control-label">القسم</label>
+                <select asp-for="DepartmentId" class="form-control" asp-items="@ViewBag.Department">
+                </select>
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-info" />
+                <a asp-action="Index" class="btn btn-outline-info">العوده إلي القائمة</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,39 @@
+﻿@model UpdateSrcFileCommand 
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>تعديل</h1>
+
+<h4>الجهات المرسلة</h4>
+<hr />
+@if (ViewBag.IsSuccess)
+{
+    <div style="display:inline-block" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong> تم تعديل</strong> بيانات الجهة المرسلة
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden = "true">&times;</span>
+              </button>
+            </div>
+}
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">الأسم</label>
+                <input autofocus asp-for="Name" class="form-control" autocomplete="off" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-info" />
+                <a asp-action="Index" class="btn btn-outline-info">الرجوع الي القائمة</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

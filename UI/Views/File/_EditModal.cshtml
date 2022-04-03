@@ -1,0 +1,42 @@
+﻿@using UI.ViewModels
+@model FileEditViewModel
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">تغير الضابط</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+        <form asp-action="EditModal">
+            <div class="modal-body">
+                <div class="form-group row">
+                    <input hidden asp-for="@Model.Id" />
+                    <label class ="col-sm-2 col-form-label"> الضباط</label>
+                    <div class="col-sm-6" style="width:auto">
+                        @Html.ListBoxFor(model => model.OfficerId,new MultiSelectList(Model.drpOfficers, "Value", "Text")
+                        , new { @class = "form-control", multiple = "multiple", id = "officer_dropdown" })
+                    </div>
+                    <span asp-validation-for="OfficerId" class="text-danger"></span>
+                </div>
+              </div>   
+             <div class="modal-footer">
+                <input type="submit" value="حفظ" class="btn btn-primary" data-save="modal"/>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">غلق</button>
+              </div>
+       </form>
+     
+      
+    </div>
+  </div>
+</div>
+
+
+<script>
+            $(document).ready(function () {
+            $('#officer_dropdown').multiselect();
+        });
+</script>

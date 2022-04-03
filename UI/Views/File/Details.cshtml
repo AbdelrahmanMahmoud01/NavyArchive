@@ -1,0 +1,109 @@
+﻿@using UI.ViewModels
+@model FileDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>تفاصيل ملف</h1>
+
+<div>
+    <h4>@Model.AboutTag</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            الجهة المرسله
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                var soruce = string.Join(" - ", Model.SoruceName); 
+            }
+          @Html.DisplayFor(modelItem=>soruce)
+        </dd>
+        <dt class = "col-sm-2">
+            القسم
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                var department = string.Join(" - ", Model.DepartmentName); 
+            }
+          @Html.DisplayFor(modelItem=>department)
+        </dd>
+        <dt class = "col-sm-2">
+            ضابط
+        </dt>
+           <dd class="col-sm-10">
+              @{
+                var officer = string.Join(" - ", Model.OfficerName); 
+            }
+          @Html.DisplayFor(modelItem=>officer)
+        </dd>
+        <dt class = "col-sm-2">
+            بشأن
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AboutTag)<br />
+            @if (Model.AboutUrl != null)
+            {
+                <a href="~/images/@Model.AboutUrl" target="_blank">أضغط للقراءة</a>
+            }
+            else
+            {
+                <span><b>لا يوجد ملف</b></span>
+            }
+        </dd>
+        <dt class = "col-sm-2">
+            القيد
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Const)
+        </dd>
+        <dt class = "col-sm-2">
+            الاجراء
+        </dt>
+        
+         <dd class = "col-sm-10">
+            @if (Model.ProcedcureTage != null)
+            {
+                @Html.DisplayFor(model => model.ProcedcureTage)
+            }
+            @if(Model.ProcedcureUrl != null)
+            {
+                <a href="~/images/@Model.AboutUrl" target="_blank">أضغط للقراءة</a>
+            }
+            @if(Model.ProcedcureTage == null && Model.ProcedcureUrl == null)
+            {
+                <span><b>لم يتم إتخاذ إجراء</b></span>
+            }
+         </dd>        
+        <dt class = "col-sm-2">
+            تاريخ الأستلام
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            أخر ميعاد للرد
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReminderDate)
+        </dd>
+        <dt class = "col-sm-2">
+            ملاحظات
+        </dt>
+        <dd class = "col-sm-10">
+            @if (Model.Note != null)
+            {
+                @Html.DisplayFor(model => model.Note)
+            }
+            else
+            {
+                <span>لا يوجد</span>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">تعديل</a>
+    <a asp-action="Index" class="btn btn-outline-info">رجوع</a>
+</div>

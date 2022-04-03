@@ -1,0 +1,99 @@
+﻿@using Infrastructure
+@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> signInManger
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NavyArchive</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/bootstrap-multiselect.css" />
+</head>
+<body style=" font-weight:bold;background:url(/img/bg-img.jpg) no-repeat bottom fixed;
+background-size:cover;">
+    <header>
+        <nav style="border-radius: 2px 2px 5px 5px" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
+            <div class="container">
+                
+                <a class="navbar-brand logo" asp-area="" asp-controller="file" asp-action="Index">
+                    <img src="~/img/logo2.png" alt="Logo" style="width:60px;">
+                    أرشيف الشعبة الهندسية </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (signInManger.IsSignedIn(User))
+                        {
+                            <li class="nav-item ml-auto">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Src" asp-action="Index">الجهات المرسلة</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Dest" asp-action="Index">الفروع </a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Officer" asp-action="Index">ضباط متخصصين</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="File" asp-action="Index">الملفات</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="UrgentFiles" asp-action="Index">
+                                الملفات العاجلة</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Manage @User.Identity.Name
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item text-primary" asp-controller="Users"
+                                       asp-action="ListUsers">المستخدمين</a>
+                                    <a class="dropdown-item text-primary" asp-controller="Roles"
+                                       asp-action="ListRoles">الصلاحيات</a>
+                                    <a class="dropdown-item text-primary" asp-controller="Account"
+                                       asp-action="ChangePassword">الرقم السري</a>
+                                       <form method="post" asp-action="Logout" asp-controller="Login">
+                                        <button type="submit" class="dropdown-item text-primary">
+                                            تسجيل الخروج
+                                        </button>
+                                       </form>
+                                </div>
+                            </li>
+
+                        }
+                        else{
+                            <li class="nav-item ml-auto">
+                                <a class="nav-link text-light"   asp-area="" asp-controller="Register" asp-action="RegisterMe">تسجيل مستخدم</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Loging">تسجيل الدخول</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <div class"float-right">Supervision : Colonel Hany Abdelhamed&nbsp;&nbsp;&nbsp;&nbsp;
+                &copy; @DateTime.Now.Year Abdelrahman Mahmoud</div>
+                 
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/css/bootstrap-multiselect.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
